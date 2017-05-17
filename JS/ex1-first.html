@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title></title>
+		<meta charset="UTf-8" />
+		<style type="text/css">
+		</style>
+		<script type="text/javascript">
+			function dd (variable) {
+				if (console && console.log) {
+					console.log(variable);
+					//console.log(window.maglob);
+				}
+			}
+			
+			function globalf() {
+				var maglob  = "toto";
+			}
+			
+			var recette = 'tartiflette';
+			
+			globalf();
+			dd(recette);
+			
+			
+			dd(window);
+			
+			
+		</script>
+	</head>
+	<body>
+		TOTO
+		<input type="text" id="name" name="name" value="toto" />
+		
+		La valeur est <span id="result">...</span>
+		<script>
+			var inputn = document.getElementById('name');
+			dd(inputn.value);
+			
+			var spanr = document.getElementById('result');
+			spanr.innerHTML+= inputn.value;
+		</script>
+		
+		
+		<span class="info">1</span>
+		<span class="info">2</span>
+		<span class="info">3</span>
+		<script>
+			var classsel = document.getElementsByClassName('info');
+			dd(classsel);
+			
+			var select = document.querySelectorAll('body > span.info');
+			dd(select);
+			
+			h = Number("3 petits cochons");
+			console.log(h + 1);
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title></title>
+		<meta charset="UTf-8" />
+		
+		<!-- Mise en place de JQuery 1-->
+		<script
+			  src="https://code.jquery.com/jquery-1.12.4.min.js"
+			  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+			  crossorigin="anonymous"></script>
+		
+		<script type="text/javascript">
+			function dd (variable) {
+				if (console && console.log) {
+					console.log(variable);
+				}
+			}
+		</script>
+		
+		<script>
+			
+			$(function () {
+				$('#content').load('ex4-ajax1.txt');
+				
+				$.ajax({
+					url:    'http://localhost/formation/jQuery/ex4-ajax.php?format=html',
+					method: 'POST',
+					dataType: 'html',
+					data: {
+						toto: 'tartiflette',
+					},
+					success: function (result) {
+						dd(result);
+						$("#content").after(result);
+					},
+					error:   function () {
+						dd('Ouin ! Ouin !');
+					},
+				});
+			});
+		</script>
+		
+		<style>
+
+		</style>
+	</head>
+	<body>
+		<div id="content">...</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+

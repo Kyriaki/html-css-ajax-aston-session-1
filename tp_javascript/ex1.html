@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex js</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+
+		// VERSION FONCTIONS //
+
+		function nbLettres(mot) {
+			mot.trim();
+			console.log('Le mot ' + mot + ' contient ' + mot.length + ' caractere(s)');
+			console.log('Il s\'ecrit en minuscules ' + mot.toLowerCase());
+			console.log('Il s\'ecrit en majuscules ' + mot.toUpperCase());
+		}		
+
+		function compterNbVoyelles(mot) {
+			var i =0;
+			var voyelles = ["a", "e", "i", "o" ,"u", "y"];
+			var nbVoyelles = 0;
+			while(i < mot.length){
+				for (var j = 0; j <= voyelles.length; j++) {
+
+					if(mot[i].toLowerCase() === voyelles[j]){
+					nbVoyelles++;
+					}					
+				}
+			i++;
+			}
+			console.log('Il contient ' + nbVoyelles + ' voyelle(s) et ' + (mot.length - nbVoyelles) + ' consonne(s)' );
+		}
+
+		function inversion(mot) {
+			var newMot = [];
+			for (var i = 0; i < mot.length; i++) {
+				newMot[mot.length - (i+1)] = mot[i];
+			}
+			console.log('Il s\'ecrit a l\'envers ' + newMot.join(''));
+		}
+
+		
+
+		function palindrome(mot) {
+			for (var i = 0; i < mot.length; i++) {
+				if (mot[i].toLowerCase() !== mot.toLowerCase()[mot.length -(i+1)]){
+					console.log('Le mot ' + mot + ' n\'est pas un palindrome');
+					return;
+				}
+			}
+			console.log('Le mot ' + mot + ' est un palindrome');
+		}
+
+
+		// VERSION PROTOTYPEE //
+
+		String.prototype.nbLettres = function() {
+			this.trim();
+			console.log('Le mot ' + this + ' contient ' + this.length + ' caractere(s)');
+			console.log('Il s\'ecrit en minuscules ' + this.toLowerCase());
+			console.log('Il s\'ecrit en majuscules ' + this.toUpperCase());
+		}	
+
+		String.prototype.compterNbVoyelles = function() {
+			var i =0;
+			var voyelles = ["a", "e", "i", "o" ,"u", "y", "é", "è", "â", "ä", "ï", "à", "ù"];
+			var nbVoyelles = 0;
+			while(i < this.length){
+				for (var j = 0; j <= voyelles.length; j++) {
+
+					if(this[i].toLowerCase() === voyelles[j]){
+						if(!/[-_.,!"'/$]/.test(this[i])){
+							nbVoyelles++;
+						}
+					}					
+				}
+			i++;
+			}
+			console.log('Il contient ' + nbVoyelles + ' voyelle(s) et ' + (this.length - nbVoyelles) + ' consonne(s)' );
+		}	
+
+		String.prototype.inversion = function() {
+			var newMot = [];
+			for (var i = 0; i < this.length; i++) {
+				newMot[this.length - (i+1)] = this[i];
+			}
+			console.log('Il s\'ecrit a l\'envers ' + newMot.join(''));
+		}
+
+		String.prototype.palindrome = function (){
+			for (var i = 0; i < this.length; i++) {
+				if (this[i].toLowerCase() !== this.toLowerCase()[this.length -(i+1)]){
+					console.log('Le mot ' + this + ' n\'est pas un palindrome');
+					return;
+				}
+			}
+			console.log('Le mot ' + this + ' est un palindrome');
+		}
+
+
+		String.prototype.info = function() {
+			this.nbLettres();
+			this.compterNbVoyelles();
+			this.inversion();
+			this.palindrome();
+		};
+
+		"jean-pierre".info();
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

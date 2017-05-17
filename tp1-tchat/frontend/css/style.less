@@ -1,0 +1,90 @@
+body {
+    margin:0;
+    font-size:medium;
+}
+#tchat {
+    width:90%;
+    margin:0 auto;
+    border:1px black solid;
+    border-top:0;
+    border-radius:0 0 20px 20px;
+    display:flex;
+    flex-direction: column;
+    
+    ol {
+        margin:0;
+        padding:0;
+        list-style:none;
+        overflow:auto;
+        min-width:300px;
+        height:200px;
+        
+        li {
+            //margin:2px 10px;
+            margin:0;
+            padding:2px 10px;
+            
+            border-bottom:2px rgba(220, 220, 220, 0.8) dashed;
+            
+            &:after {
+                
+                clear:both;
+            }
+                    
+            > .fullname {
+                font-size:0.8em;
+                float:left;
+                border-radius:10px 0 0 10px;
+                border:1px black solid;
+                border-right:0;
+                padding:2px;
+                font-style:italic;
+                
+                .prenom {
+                    text-transform: capitalize;
+                }
+                
+                .nom {
+                    font-variant:small-caps;
+                }
+            }
+            
+            .date {
+                font-size:0.8em;
+                float:right;
+                border-radius:0 10px 10px 0;
+                border:1px black solid;
+                border-left:0;
+                padding:2px;
+            }
+            
+            .message {
+                margin:0 68px 0 97px;
+                border:1px black solid;
+                min-height:20px;
+                padding:0 10px;
+            }
+            
+            &:nth-child(2n) > div {
+                background-color:#C3DDD3;
+                color:black;
+            }
+            &:nth-child(2n-1) > div {
+                background-color:#DAACE5;
+                color:black;
+            }
+        }
+    }
+    
+    input#message {
+        margin:0;
+        padding:5px 10px;
+        border:0;
+        border-radius:0 0 20px 20px;
+        overflow:hidden;
+        
+        font-size:1.3em;
+        
+        
+    }
+}

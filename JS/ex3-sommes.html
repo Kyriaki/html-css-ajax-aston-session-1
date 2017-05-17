@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title></title>
+        <meta charset="UTf-8" />
+        <style type="text/css">
+        </style>
+        <script type="text/javascript">
+            function dd (variable) {
+                if (console && console.log) {
+                    console.log(variable);
+                }
+            }
+            
+            
+            (function (winz) {
+                var compteur = 0;
+                
+                function incrementation(valeur) {
+                    compteur = compteur + valeur;
+                }
+                
+                winz.module_sum = function (tab) {
+                    compteur = 0;
+                    tab.forEach(incrementation);
+                    return compteur;
+                };
+    
+                var valeurs = [11, 3, 7, 2, 9, 10];
+                
+                dd(winz.module_sum(valeurs));
+                dd(compteur);
+            })(window);
+            
+            
+            var valeurs = [12, 3, 7, 2, 9, 10];
+            
+            dd(module_sum(valeurs));
+            //dd(compteur);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title></title>
+		<meta charset="UTf-8" />
+		
+		<!-- Mise en place de JQuery 1-->
+		<script
+			  src="https://code.jquery.com/jquery-1.12.4.min.js"
+			  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+			  crossorigin="anonymous"></script>
+		
+		<script type="text/javascript">
+			function dd (variable) {
+				if (console && console.log) {
+					console.log(variable);
+				}
+			}
+		</script>
+		
+		<script>
+			
+			//$(document).on('ready', function () {
+			$(function () {
+			
+				$('#toto').addClass('error');
+				
+				$('#toto').focus();
+				
+				$('#toto').on('keyup', function () {
+					if($(this).val().length <= 3) {
+						$(this).addClass('error');
+						$(this).removeClass('success');
+					} else {
+						$(this).removeClass('error');
+						$(this).addClass('success');
+					}
+				});
+				
+				$('#clickme').on('click', 'li', function () {
+					dd($(this).html());
+				});
+				
+				
+				var li = $("<li>");
+				li.html('TODO 10');
+				
+				$('#clickme').append(li);
+				
+			});
+		</script>
+		
+		<style>
+			.error {
+				border-color:red;
+			}
+			.success {
+				border-color:green;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" id="toto" />
+		
+		<ul id="clickme">
+			<li>TOTO 1</li>
+			<li>TOTO 2</li>
+			<li>TOTO 3</li>
+			<li>TOTO 4</li>
+		</ul>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+

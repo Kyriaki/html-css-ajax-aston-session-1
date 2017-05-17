@@ -1,0 +1,129 @@
+/* Fonts */
+
+@font-face{
+	font-family: "BallparkWeiner";
+	src: url(polices/ballpark.eot);
+	src: url('polices/ballpark.eot?#iefix') format('embedded-opentype'),
+         url('polices/ballpark.woff') format('woff'),
+         url('polices/ballpark.ttf') format('truetype'),
+         url('polices/ballpark.svg#BallparkWeiner') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "DayRoman";
+	src: url(polices/dayrom.eot);
+	src: url('polices/dayrom.eot?#iefix') format('embedded-opentype'),
+         url('polices/dayrom.woff') format('woff'),
+         url('polices/dayrom.ttf') format('truetype'),
+         url('polices/dayrom.svg#Dayrom') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	background-image: url(images/fond_jaune.png);
+	font-family: "Trebuchet MS";
+}
+#bloc_page{
+	width: 900px;
+	margin: auto;
+}
+#banniere_image {
+	background-image: url(images/sanfrancisco.jpg);
+	background-repeat: no-repeat;
+	height: 219px;
+	position: relative;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+#banniere_description {
+	background-color: #000000;
+	color: white;
+	opacity: 0.6;
+	position: absolute;
+	bottom:0px;
+	height: 30px;
+	width: auto;
+	border-radius: 0 0 10px 10px;
+}
+
+#titre_principal {
+	display: flex;
+	flex-direction: column;
+}
+
+#logo {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+
+#tweet {
+	width: 30%;
+}
+
+section h1, nav a, footer h1 {
+	font-family: 'DayRoman';
+	text-transform: uppercase;
+}
+
+header {
+	display: flex;
+	align-items: flex-end;
+
+	background: url('images/separateur.png') repeat-x bottom;
+	margin-bottom: 10px;
+}
+
+header h1 {
+	font-family: 'BallparkWeiner';
+}
+
+header h2 {
+	font-family: 'DayRoman'
+}
+nav{
+	margin-left: auto;
+}
+nav li {
+	display: inline;
+}
+
+section {
+	display : flex;
+}
+
+article{
+	width: 65%;
+	padding: 10px;
+
+}
+
+aside{
+	width: 35%;
+	background-color: grey;
+	padding: 10px;
+	height : 500px;
+	border-radius: 10px
+}
+
+footer {
+	display:flex;
+}
+
+@media screen and (max-width: 900px)
+{
+    #bloc_page {
+    	width: auto;
+    }
+    section {
+        flex-direction: column;
+    }
+
+    article, aside {
+        width: auto;
+        margin-bottom: 15px;
+    }
+}

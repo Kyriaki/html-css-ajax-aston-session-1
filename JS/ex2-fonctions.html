@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title></title>
+		<meta charset="UTf-8" />
+		<style type="text/css">
+		</style>
+		<script type="text/javascript">
+			function dd (variable, variable2) {
+				if (variable2 === undefined) {
+					variable2 = '4';
+				}
+				if (console && console.log) {
+					console.log(variable);
+					console.log(variable2);
+				}
+			}
+			
+			dd('t1', 't2', 't3');
+			dd('r');
+			
+			
+			
+			dd("  to tot   ".trim());
+			dd("  to tot   ".trim().toUpperCase());
+			
+			
+			String.prototype.tartiflette = function () {
+				dd(this.toString());
+				return 'wayh \\ó/!';
+			};
+			
+			dd("tartiflette".tartiflette());
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+
+
+
+
+

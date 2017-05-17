@@ -1,0 +1,19 @@
+@wmenu: 200px;
+@wcontent:1000px;
+
+body {
+    aside {
+        width: @wmenu;
+        background:red;
+    }
+    
+    article {
+        width: @wcontent - @wmenu;
+        background:blue;
+        border-radius: 10px;
+        height: 100px;
+    }
+    &:hover {
+    	color:white;
+    }
+}

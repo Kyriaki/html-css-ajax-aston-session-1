@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title></title>
+		<meta charset="UTf-8" />
+		
+		<!-- Mise en place de JQuery 1-->
+		<script
+			  src="https://code.jquery.com/jquery-1.12.4.min.js"
+			  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+			  crossorigin="anonymous"></script>
+		
+		<script type="text/javascript">
+			function dd (variable) {
+				if (console && console.log) {
+					console.log(variable);
+				}
+			}
+		</script>
+		<style>
+			.toto {
+				color:blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1 id="tructropimportant">TITRE</h1>
+			<span class="info">1</span>
+			<span class="info">2</span>
+			<span class="info">3</span>
+		</div>
+		<script>
+			dd($('div > :first'));
+			dd($('div > span:first-of-type'));
+			dd($('div > span:first-child'));
+			
+			
+			$('div > span:first-of-type').addClass('toto');
+			$('div > span').toggleClass('toto');
+			
+			$('div > span:not(span:first-of-type)').addClass('toto2');
+			
+			
+			$('div > span:nth-of-type(2)').toggleClass('toto3');
+			$('div > span').eq(1).toggleClass('toto4');
+			
+			
+			$("#tructropimportant").parent().css('border', '2px solid black');
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		var urltp = 'http://divl/formation/dev9/tp1-tchat/backend/';
+
+		function sendMessage(myToken){
+			$.ajax({
+				url : urltp + 'postMessage.php?token=' + myToken,
+				method : 'POST',
+
+				data: {
+					token: myToken,
+					message : "SWIGGITY SWOOTY COMIN FOR DAT BOOTY"
+				},
+
+				success: function(){
+					console.log("message sent");
+				},
+				error: function(){
+					console.log("LOUPE GRO NUL T VREMEN PA BON");
+				}
+			})
+		}
+
+		function getMessage(myToken){
+			$.ajax({
+				url: urltp + 'getMessages.php',
+				method : 'GET',
+
+				data: {
+					token: myToken
+				},
+
+				success: function(result){
+					console.log("messages received");
+					var messages = result.resultDetails;
+					console.log(messages);
+					messages.forEach(function(message){
+						writeMessage(message.prenom, message.nom, message.message, message.date);
+					});
+				},
+
+				error: function(){
+					console.log("T VREMEN UN GRO NAZ TU PU");
+				}
+			})
+
+		function writeMessage (prenom, nom, message, date) {
+			$li = $("<li>");
+			$timestamp = $("<div>");
+			$username = $("<div>");
+			$message = $("<div>");
+
+			$timestamp.addClass('timestamp');
+			$username.addClass('username');
+			$message.addClass('message');
+
+			$timestamp.html(date);
+			$username.html("<span class='prenom'>" + prenom + "</span> <span class='nom'>" + nom + "</span>");
+			$message.html(message.replace('<', '&lt;'));
+
+			$li.append($timestamp);
+			$li.append($username);
+			$li.append($message);
+
+			$("#chatbox > ul").prepend($li);
+		}
+
+
+		}
+		$.ajax({
+			url: urltp + 'getLoginToken.php',
+			method: 'GET',
+			data: {
+				prenom: 'clément',
+				nom : 'gamelin'
+			},
+
+			success: function(result){
+				loginToken = result.resultDetails.token;
+				console.log(loginToken);
+				sendMessage(loginToken);
+				getMessage(loginToken);
+			},
+		});
+
+	</script>
+</head>
+<body>
+	<header>
+		<h1> Aston Chat </h1>
+	</header>
+	<div id="chat">
+		<div id="chatbox">
+			<ul>
+				<li>
+					<div class="timestamp"> 14/10/2016 10:37:54 </div>
+					<div class="username"> Test</div>
+					<div class="message"> Le message du futur qu'il est bien </div>
+				</li>
+			</ul>
+		</div>
+		<input type="text" name="message" placeholder="Message..." />
+	</div>
+</body>
+</html>

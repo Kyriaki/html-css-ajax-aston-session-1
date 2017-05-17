@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title></title>
+		<meta charset="UTf-8" />
+		
+		<!-- Mise en place de JQuery 1-->
+		<script
+			  src="https://code.jquery.com/jquery-1.12.4.min.js"
+			  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+			  crossorigin="anonymous"></script>
+		
+		<script type="text/javascript">
+			function dd (variable) {
+				if (console && console.log) {
+					console.log(variable);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		TOTO
+		<input type="text" id="name" name="name" value="toto" />
+		
+		La valeur est <span id="result">...</span>
+		<script>
+			var inputn1 = document.getElementById('name');
+			var inputn2 = jQuery('#name');
+			dd(inputn1);
+			dd(inputn2.val());
+			
+			inputn2.val('tartiflette');
+			
+			jQuery('#result').html(inputn2.val());
+			//var spanr = document.getElementById('result');
+			//spanr.innerHTML+= inputn.value;
+		</script>
+		
+		<script>dd(46);</script>
+		
+		
+		<span class="info" style='background-color:blue;'>1</span>
+		<span class="info" style='background-color:white;'>2</span>
+		<span class="info" style="background-color:red;">3</span>
+		<script>
+			$('body span.info').css('color', 'green');
+			dd(jQuery('body span.info').attr('style'));
+			dd(jQuery('body span.info').text());
+			
+			
+			//var classsel = document.getElementsByClassName('info');
+			//dd(classsel);
+			//
+			//var select = document.querySelectorAll('body > span.info');
+			//dd(select);
+			//
+			//h = Number("3 petits cochons");
+			//console.log(h + 1);
+		</script>
+	</body>
+</html>

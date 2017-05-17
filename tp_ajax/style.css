@@ -1,0 +1,59 @@
+body {
+	background-color: #00a4a7;
+}
+
+header {
+	text-align: center;
+	font-family: Trebuchet MS;
+}
+
+ul {
+	padding-left: 10px;
+}
+
+li {
+	list-style: none;
+}
+
+#chat {
+	margin: auto;
+	background-color: #eeeeee;
+	position: relative;
+	width: 900px;
+	height: 500px;
+	overflow-y: hidden;
+}
+
+#chatbox {
+	height: 460px;
+	overflow-y:scroll;
+}
+
+input {
+	position: absolute;
+	bottom : 0px;
+	height: 40px;
+	width: 900px;
+	margin: 0;
+	border:0;
+	padding: 0;
+}
+
+.timestamp {
+	float: left;
+	font-size: 12px;
+	font-style: italic;
+	margin: 5px;
+}
+
+.username {
+	float: left;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin: 5px;
+}
+
+.message {
+	font-family: Trebuchet MS;
+	margin : 5px;
+}
