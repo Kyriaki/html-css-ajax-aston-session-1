@@ -1,0 +1,12 @@
+AddType audio/x-m4a .m4a
+AddType audio/mp4a-latm .m4b
+AddType audio/mp4a-latm .m4p
+AddType video/mp4 .mp4
+AddType video/x-m4v .m4v 
+
+
+Pensez également à préciser les types MIME dans un fichier .htaccess pour être sûr qu'ils soient corrects, les trois lignes suivantes suffisent à s'assurer la tranquilité :
+
+AddType video/ogg  .ogv
+AddType video/mp4  .mp4
+AddType video/webm .webm

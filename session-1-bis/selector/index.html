@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Sélecteurs</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		/*Sélecteur tout enfant*/
+		#container span{
+			color: yellow;
+		}
+		/* Sélecteur enfant direct */
+		#container>span{
+			color: orange;
+		}
+		/* Sélecteur adjacent direct */
+		#container p+p{
+			color: purple;
+		}
+		/* Sélécteur adjacent indirect */
+		#container2 p~p{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<p><span>Le span dans le p</span></p>
+		<span>Le span en dehors de p enfant direct de container</span>
+		<p>2eme para ciblé par le sélecteur + car il y a un span avant</p>
+		<p>3eme para</p>
+		<p>4eme para</p>
+	</div>
+	<div id="container2">
+		<p><span>Le span dans le p</span></p>
+		<span>Le span en dehors du p enfant direct de container</span>
+		<p>2eme paragraphe ciblé par le sélécteur ~ car il ne prend pas en compte les balises qui s'interposent</p>
+		<p>3eme para</p>
+		<p>4eme para</p>
+	</div>
+</body>
+</html>

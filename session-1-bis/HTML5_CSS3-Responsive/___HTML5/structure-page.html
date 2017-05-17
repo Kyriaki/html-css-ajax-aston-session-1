@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myHeader, #demo header, #myNav, #demo nav, #myArticle, #demo article, #mySection, #demo section, #myAside, #demo aside, #myFooter, #demo footer {
+    background-color: silver;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+#mySection, #demo section {
+    background-color: gray;
+}
+.box {
+    border: medium solid silver;
+    float: left;
+    height: 128px;
+    margin: 10px;
+    padding: 5px;
+    width: 256px;
+}
+textarea {
+    width: 350px;
+}
+div#fallback {
+    float: right;
+    height: 53px;
+    width: 163px;
+}
+iframe {
+    height: 400px;
+    left: 50px;
+    position: relative;
+    width: 850px;
+}
+iframe[src="_svg.xhtml"] {
+    height: 150px;
+    left: 50px;
+    position: relative;
+    width: 475px;
+}
+
+</style>
+</head>
+<body>
+
+<div style="float:left;">
+	<div id="myHeader"><h4>&lt;div id="header"&gt;</h4></div>
+	<div id="myNav">&lt;div id="nav"&gt;</div>
+	<div id="myArticle" style="float:left;">
+		&lt;div id="article"&gt;
+		<div id="mySection">&lt;div id="section"&gt;</div>
+	</div>
+	<div id="myAside" style="float:right;">&lt;div id="aside"&gt;</div>
+	<div id="myFooter" style="clear:both;">&lt;div id="footer"&gt;</div>
+</div>
+
+
+
+<div style="float:left;"><br/><br/><br/><br/><br/><br/>=></div>
+
+
+<div style="float:left;" id="demo">
+	<header><h4>&lt;header&gt;</h4></header>
+	<nav>&lt;nav&gt;</nav>
+	<article style="float:left;">
+		&lt;article&gt;
+		<section>&lt;section&gt;</section>
+	</article>
+	<aside style="float:right;">&lt;aside&gt;</aside>
+	<footer style="clear:both;">&lt;footer&gt;</footer>
+</div>
+<div style="clear:both"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flex</title>
+<style>
+
+
+/*
+
+Cette propriété s’applique au flex-container et détermine l’axe principal du modèle de boîte flexible.
+flex-direction: column;
+    row (distribution horizontale, valeur par défaut)
+    row-reverse (distribution horizontale inversée)
+    column (distribution verticale)
+    column-reverse (distribution verticale inversée)
+
+
+
+
+ flex-flow:row wrap;
+ La propriété flex-wrap définit si le contenu sera distribué sur une seule ligne (ou colonne selon l’axe principal) 
+ ou sur plusieurs lignes. En clair, si les flex-items ont le droit de passer à la ligne ou non.
+
+Les valeurs de flex-wrap sont :
+
+    nowrap (les éléments ne passent pas à la ligne, valeur par défaut)
+    wrap (les éléments passent à la ligne dans le sens de lecture)
+    wrap-reverse (les éléments passent à la ligne dans le sens inverse)
+
+ À noter qu’il existe une propriété raccourcie flex-flow qui regroupe flex-direction et flex-wrap .
+
+ affichage en ligne et passage à la ligne autorisé 
+.container {
+    flex-flow: row wrap;
+}
+
+
+******************************ALIGNEMENT********************************
+
+1) Axe principal : justify-content
+
+Les alignements dans l’axe de lecture principal sont définis à l’aide de la propriété justify-content, dont les valeurs possibles sont :
+
+    flex-start (éléments positionnés au début du sens de lecture, valeur par défaut)
+    flex-end (éléments positionnés à la fin)
+    center (position centrale)
+    space-between (répartition “justifiée”)
+    space-around (variante de répartition “justifiée”)
+
+
+2) Axe secondaire : align-items
+
+    flex-start (au début)
+    flex-end (à la fin)
+    center (au centre)
+    baseline (généralement identique à flex-start)
+    stretch (étirés dans l’espace disponible, valeur par défaut)
+
+3)  Traiter les cas particuliers : align-self
+
+La propriété align-self , permet de distinguer l’alignement d’un "flex-item" de ses frères. 
+Les valeurs de cette propriété sont identiques à celles de align-items.
+
+
+4) Centrer horizontalement et verticalement : Propriété margin
+
+La propriété margin lorsqu’elle est affectée à un "flex-item" ouvre de nouvelles perspectives, 
+notamment dans l’axe vertical puisque Flexbox n’est plus lié à un sens de lecture en particulier.
+En clair, il devient possible de positionner un élément en bas de son conteneur à l’aide d’un margin-top: auto, 
+ou mieux : centrer à la fois horizontalement et verticalement via un simple margin: auto.
+
+
+5)  Ordonnancement
+
+L’une des fonctionnalités les plus avant-gardistes du modèle d’affichage Flexbox est de pouvoir réordonner à sa guise chacun des éléments indépendamment 
+grâce à la propriété order.
+Les valeurs de order agissent telles des pondérations : les éléments dont la valeur est la plus forte se trouveront en bas de la pile.
+La propriété order s’applique aux "flex-items" et sa valeur initiale est 0.
+
+Ex : 
+le premier de la liste s'affichera en bas de pile 
+
+li:first-of-type {
+    order: 1;
+}
+
+
+6) Flexibilité (étirement d'un flex item en largeur ou hauteur) : flex
+
+ La propriété flex est un raccourci de trois propriétés, flex-grow, flex-shrink et flex-basis, qui s’appliquent aux "flex-items" et dont les fonctionnalités sont:
+
+    flex-grow : capacité pour un élément à s’étirer dans l’espace restant,
+    flex-shrink : capacité pour un élément à se contracter si nécessaire,
+    flex-basis : taille initiale de l’élément avant que l’espace restant ne soit distribué.
+
+Par défaut, les valeurs de ces propriétés sont : flex-grow: 0, flex-shrink: 1 et flex-basis: auto.
+En clair, les flex-items n’occupent initialement que la taille minimale de leur contenu.
+
+Pour rendre un élément flexible, il suffit de lui attribuer une valeur de flex-grow (ou flex en raccourci) supérieure à zéro.
+Cet élément occupera alors l’espace restant au sein de son conteneur :
+
+
+
+
+
+*/
+
+#parent {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #c3c3c3;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-flow: row wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-flow:row wrap; /*row wrap; ou column nowrap; */
+	justify-content: space-around;
+}
+
+#parent div {
+    width: 100px;
+    height: 100px;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+<div id="parent">
+  <div style="background-color:coral;">A</div>
+  <div style="background-color:lightblue;">B</div>
+  <div style="background-color:khaki;">C</div>
+  <div style="background-color:pink;">D</div>
+  <div style="background-color:lightgrey;">E</div>
+  <div style="background-color:lightgreen;">F</div>
+</div>
+
+<a href="http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html"> Alsacrations</a>
+<br>
+<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"> Super guide !!!</a>
+<br>
+<a href="http://the-echoplex.net/flexyboxes/"> Flex generator</a>
+<br>
+
+
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+
+body {
+	padding: 5px 20px;
+	background: #fff;
+	color: #000;
+	font:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+header, aside, footer {display: block;}
+h1, h2 {
+	color: #456;	
+}
+h1 {
+	border-bottom: 1px solid #ccc;
+	letter-spacing: 1px;	
+}
+/*************menu ************************************/
+nav#menu-top{
+	background-color:red;	
+	padding:0 20px;
+	height:50px;
+	margin:0 0 20px 0;
+}
+
+nav#menu-top a{
+	display:block;	
+	float:left;	
+	color:#fff;
+	padding:15px 20px;
+	text-decoration:none;
+	text-transform:capitalize;
+	font-weight:bold;	
+	background-color:#F90;
+	border-right:#fff thin dashed
+	/*border:#000 thin dashed*/
+}
+
+nav#menu-top a:hover{
+	background-color:#fff;
+	color:#F60;	
+}
+/********************************************************/
+
+article {
+	margin:0px 0 20px 0;
+	text-align:justify;	
+}
+/*article p {	
+	float:right;	
+}*/
+
+article:first-child {	
+	color: #777;
+	font-style: italic;
+}
+aside {
+	float: right;
+	width: 25%;
+	padding: 0 10px;
+	margin-left: 1%;
+	background-color:beige;
+	font-size: 0.9em;
+	border:#000 thin dashed
+}
+
+video, figure {
+	width:400px;	
+	float:left;
+	margin:0 10px 20px 0
+}
+
+.ligne_sep {	
+	margin:0px 0 20px 0;
+	height:1px;
+	background-color:red;	
+	clear:both;
+	border:#000 thin dashed;
+}
+
+figure {		
+	padding:0px;
+}
+
+figure figcaption {
+	margin:0 10px
+}
+#contenu {
+	float:left;
+	width:70%;
+	
+}
+footer {
+	border-top: 1px solid #ccc;
+	color: #777;
+	clear:both
+}
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+div
+{
+position: absolute;
+height: 200px;
+width: 200px;
+border: 1px solid black;
+margin:300px
+}
+
+#div1
+{
+	z-index:2
+}
+
+/*
+Par defaut 
+transform-origin:center center
+ou
+transform-origin:right 50% 50%;
+*/
+
+#div2
+{
+z-index:1;
+background-color: red;
+transform: rotate(45deg);
+transform-origin:right top;
+-ms-transform: rotate(45deg); /* IE 9 */
+-ms-transform-origin:right top; /* IE 9 */
+-webkit-transform: rotate(45deg); /* Safari and Chrome */
+-webkit-transform-origin:right top; /* Safari and Chrome */
+-moz-transform: rotate(45deg); /* Firefox */
+-moz-transform-origin:right top; /* Firefox *
+-o-transform: rotate(45deg); /* Opera */
+-o-transform-origin:right top; /* Opera */}
+</style>
+</head>
+
+<body>
+
+<div id="div1"></div>
+<div id="div2">HELLO</div>
+
+
+</body>
+</html>
+

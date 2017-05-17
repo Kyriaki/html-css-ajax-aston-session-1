@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<!-- Pour faire du responsive -->
+	<meta name="viewport" content="width=device-width" />
+	<title>Structure de page html</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+	<!--  Retour au sommet de page-->
+	<div id="cible"></div>
+	<div id="site">
+		<!-- Barre fixed au top-->
+		<div id="fixed-top">
+			<h2>Un exemple de bloc en position fixed</h2>
+		</div>
+		<!-- Button fixed en bas-->
+		<button id="fixed-bot"> Un exemple d'élément fixe</button>
+		<a id="fixed-bot2" href="#cible">
+			<i class="fa fa-arrow-circle-up fa-3x" aria-hidden="true"></i>
+		</a>
+		<!-- Header -->
+		<header id="top">
+			<img src="https://webmasterbank.files.wordpress.com/2012/02/bg-header-index.jpg" alt="Image de header"></image>
+			<h1> Titre de site </h1>
+		</header>
+		<!-- Menu de navigation -->
+		<nav id="navigation">
+			<ul>
+				<li><a href="../vertical_center/index.html" target="_blank">Navigation 1 ></a></li>
+				<li><a href="../selector/index.html" target="_blank">Navigation 2 ></a></li>
+				<li><a href="../menu_double_entree/index.html" target="_blank">Navigation 3 ></a></li>
+			</ul>
+		</nav>
+		<!-- Main -->
+		<section id="main" class="clearfix">
+			<!-- Contenu de gauche : article, image, paragraphe -->
+			<div id="gauche" class="colonnage">
+				<section id="theme1">
+				<h2> Exemple de section</h2>
+					<article>
+						<h3>Exemple d'article</h3>
+						<p>Contenu d'article, texte, images, etc...</p>
+						<!-- Exemple de commentaire -->
+						<figure>
+							<img src="http://www.wanimo.com/veterinaire/cache/multithumb_thumbs/b_300_0_16777215_00_images_articles_chat_chaton-diarrhee.jpg" alt="Exemple d'image"></img>
+							<figcaption>Image d'un chaton</figcaption>
+						</figure>
+						<p>
+							Article nor prepare chicken you him now. Shy merits say advice ten before lovers innate add. She cordially behaviour can attempted estimable. Trees delay fancy noise manor do as an small. Felicity now law securing breeding likewise extended and. Roused either who favour why ham. Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor. Him had wound use found hoped. Of distrusts immediate enjoyment curiosity do. Marianne numerous saw thoughts the humoured. 
+						</p>
+					</article>
+					
+					<!-- Footer de section -->
+					<footer>
+						<h3> Exemple de footer de section </h3>
+					</footer>
+				</section>
+				<!-- Tableau -->
+				<table border="1">
+					<thead>
+						<tr>
+							<th>Exemple de table</th>
+							<th>Type de balise</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td>Bas de tableau</td>
+							<td></td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<td>Ligne</td>
+							<td>tr</td>
+						</tr>
+						<tr>
+							<td>Colonne</td>
+							<td>td</td>
+						</tr>
+						<tr>
+							<td>Tête</td>
+							<td>th</td>
+						</tr>
+						<tr>
+							<td>Pied</td>
+							<td>tfoot</td>
+						</tr>
+					</tbody>
+
+				</table>
+				<!-- Formulaire -->
+				<form action="index.html" method="POST">
+					Login : <input type="text" name="Login"><br />
+					Password : <input type="password" name="Password"><br/>
+					A quelle école Aston êtes vous?
+					<select>
+						<option value="Lille" selected>Lille</option>
+						<option value="Arcueil">Arcueil</option>
+					</select>
+					Sexe : 
+					<input type="radio" name="gender" value="man">Homme</input>
+					<input type="radio" name="gender" value="woman">Femme</input>
+					Age : 
+					<input type="checkbox" name="enfant" value="enfant">Enfant</input>
+					<input type="checkbox" name="adolescent" value="adolescent" checked>Adolescent</input>
+					<input type="checkbox" name="adulte" value="adulte">Adulte</input>
+					<input type="submit" value="Confirm"></input><br/>
+					Saisir une date : <input type="date" required></input>
+					Saisir une couleur : <input type="color"></input>
+				</form>
+				<div class="video-container">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/EkNnLx6f1RY" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+			<!-- Contenu de droite : aside et menu -->
+			<div id="droite" class="colonnage">
+				<aside>
+					<h2> Exemple d'aside </h2>
+					<p>Contenu secondaire, moins important, menus de navigation, etc...</p>
+				</aside>
+				<aside>
+					<h2> Second exemple d'aside </h2>
+					<nav>
+						<ul>
+							<li><a href="#"> Option de menu 1</a></li>
+							<li><a href="#"> Option de menu 2</a></li>
+							<li><a href="#"> Option de menu 3</a></li>
+						</ul>
+					</nav>
+				</aside>
+				
+			</div>
+			<!-- Retour de flux obsolète : <br class="clear"/> -->
+		</section>
+		<!-- Footer de bas de page -->
+		<footer id="bottom">
+			<h2>Exemple de footer</h2>
+			<p>Bas de page, &copy; 2016 Tous droits de reproduction réservés</p>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.ok {
+	color:red
+}
+</style>
+</head>
+<body>
+<span id="test" class="ko">innerHTML non supporté !</span>
+<script>
+	eltTest = document.getElementById("test");
+	eltTest.innerHTML = "innerHTML supporté !"
+	eltTest.className = "ok";
+</script>
+
+
+</body>
+</html>

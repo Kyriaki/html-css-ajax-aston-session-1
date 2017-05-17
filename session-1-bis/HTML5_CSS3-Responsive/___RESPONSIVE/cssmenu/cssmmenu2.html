@@ -1,0 +1,90 @@
+<!doctype html>
+<!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="fr"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="fr"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="fr"> <![endif]-->
+<!--[if gt IE 9]> <!-->
+<html class="no-js" lang="fr"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive mobile navigation</title>
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+	<link rel="stylesheet" href="styles.css" media="all">
+</head>
+<body>
+	<h1>Responsive Nav</h1>
+
+	<nav role="navigation" id="navigation">
+		<ul>
+			<li><a href="#">Salade</a></li>
+			<li><a href="#">Tomates</a></li>
+			<li><a href="#">Oignons</a></li>
+			<li><a href="#">Choucroute</a></li>
+			<li><a href="#">Riesling</a></li>
+			<li><a href="#">Picon-Bière</a></li>
+		</ul>
+	</nav>
+	<section class="main">
+		<p>Affichez cette page sur un smartphone, ou redimensionnez votre fenêtre.</p>
+		<h2>Avantages :</h2>
+		<ul>
+			<li>Responsive</li>
+			<li>Très léger (pas de jQuery)</li>
+			<li>Compatible tous devices modernes</li>
+			<li>Pas d'image, pas de requêtes</li>
+			<li>Autonome</li>
+			<li>Accessible (lecteur d'écran VoiceOver)</li>
+			<li>Code propre et sémantique</li>
+			<li>Fonctionnel même lorsque JavaScript est désactivé (menu déployé)</li>
+		</ul>
+
+		<h2>Compatibilité :</h2>
+		<ul>
+			<li>OK Apple iOS 5+</li>
+			<li>OK Android 3+</li>
+			<li>OK Windows Phone IE10+</li>
+			<li>OK Firefox mobile</li>
+			<li>OK Chrome mobile</li>
+			<li>OK Android 2, Opera Mini (menu ouvert)</li>
+			<li>OK VoiceOver screen reader</li>
+		</ul>
+
+		<p>Auteur : <a href="http://goetter.fr/">Raphaël Goetter</a>, Alsacréations. <a href="http://goetter.fr/nav">Retour à l'accueil</a></p>
+	</section>
+
+
+<script>
+
+// config
+var maxBreakpoint = 767; // maximum breakpoint
+var targetID = 'navigation'; // target ID (must be present in DOM)
+
+// targeting navigation
+var n = document.getElementById(targetID);
+
+// targetID will be initially closed if JS enabled
+n.classList.add('is-closed');
+
+// global navigation function
+function navi() {
+  // when small screen, create a switch button, and toggle targetID class
+  if (window.matchMedia("(max-width:" + maxBreakpoint + "px)").matches && document.getElementById("toggle-button") == undefined) {
+    n.insertAdjacentHTML('afterBegin', '<button id="toggle-button" aria-label="open/close navigation"></button>');
+    t = document.getElementById("toggle-button");
+    t.onclick = function() {
+      n.classList.toggle('is-closed');
+    }
+  }
+  // when big screen, delete switch button, and toggle navigation class
+  var minBreakpoint = maxBreakpoint + 1;
+  if (window.matchMedia("(min-width: " + minBreakpoint + "px)").matches && document.getElementById("toggle-button")) {
+    document.getElementById("toggle-button").outerHTML = "";
+  }
+}
+navi();
+// when resize or orientation change, reload function
+window.addEventListener('resize', navi);
+
+</script>
+
+</body>
+</html>

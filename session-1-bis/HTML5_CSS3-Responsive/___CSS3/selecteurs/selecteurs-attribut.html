@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Document sans nom</title>
+<style>
+/*******attribut title qui contient exactement es************/
+p.example[title="es"]{
+		color:#fff;
+		background:#333;
+}
+/********commence par es**************/
+p.example[title^="es"]{
+		color:#fff;
+		background:#333;
+}
+/************finit par****************/
+p.example[title$="on"]{
+		color:#fff;
+		background:#045FB4;
+}
+
+/************contient****************/
+p.example[title*="ss"]{
+		color:#fff;
+		background:#045FB4;
+}
+
+</style>
+
+</head>
+
+<body>
+<p class="example"> je n'ai pas d'attribut title</p>
+
+	<p class="example" title="comment"> j'ai un attribut title mais il ne commence pas par "ess"</p>
+
+	<p class="example" title="essai"> j'ai un attribut title commençant par "ess"</p>
+
+	<p class="example" title="esson"> j'ai un attribut title commençant par "ess" également</p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Document sans nom</title>
+<style>
+div {
+	width:200px;
+	height:200px;
+	background-color:#F60;
+	margin-bottom:10px;
+	margin-right:10px;
+	/*float:left;*/
+}
+
+
+
+div#largeur {
+	 transition:width 2s ease-in-out 1s;
+	 -webkit-transition:width 2s ease-in-out 1s;
+	 -moz-transition:width 2s;
+	 -o-transition:width 2s ease-in-out;
+	 /**********ie9********************/
+	 -ms-transition:width 2s ease-in-out;
+}
+
+div#largeur:hover {
+	 width:300px;
+}
+
+
+/*
+ease 	Default value. Specifies a transition effect with a slow start, then fast, then end slowly (equivalent to cubic-bezier(0.25,0.1,0.25,1))
+
+linear 	Specifies a transition effect with the same speed from start to end (equivalent to cubic-bezier(0,0,1,1))
+
+ease-in 	Specifies a transition effect with a slow start (equivalent to cubic-bezier(0.42,0,1,1))
+
+ease-out 	Specifies a transition effect with a slow end (equivalent to cubic-bezier(0,0,0.58,1))
+
+ease-in-out 	Specifies a transition effect with a slow start and end (equivalent to cubic-bezier(0.42,0,0.58,1))
+
+cubic-bezier(n,n,n,n) 	Define your own values in the cubic-bezier function. Possible values are numeric values from 0 to 1
+
+*/
+
+div#couleur {
+	 transition:background-color 1s ease-in-out 0s;
+	 -webkit-transition:background-color 1s ease-in-out 0s;
+	 -moz-transition:background-color 1s ease-in-out 0s;
+	 -o-transition:background-color 2s ease-in-out 0s;
+	 /**********ie9********************/
+	 -ms-transition:background-color 2s ease-in-out;
+	 background-color:#F60;
+	 height:auto;
+	 text-align:center;
+	 font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	 cursor:pointer;
+	 
+	 
+}
+
+div#couleur:hover {
+	 background-color:#000;
+}
+
+
+div#couleur p {
+	 transition:color 1s ease-in-out 0s;
+	 -webkit-transition:color 1s ease-in-out 0s;
+	 -moz-transition:color 1s ease-in-out 0s;
+	 -o-transition:color 2s ease-in-out 0s;
+	 /**********ie9********************/
+	 -ms-transition:color 2s ease-in-out;	
+	 margin:0;	
+	 font-size:2em;
+	 line-height:2em
+	 
+	 
+}
+
+div#couleur:hover p {
+	color:#F60;
+}
+
+
+
+</style>
+
+
+</head>
+
+<body>
+<div id="largeur"></div>
+<div id="couleur"><p>Cliquer ici</p></div>
+
+
+
+
+</body>
+</html>

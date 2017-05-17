@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+Entrez une valeur :
+<input id="demo" name="demo" onKeyUp="sessionStorage.setItem(this.name,this.value)"><br/>
+Puis naviguez sur internet cliquer sur <a href="http://www.dezeer.com">Deezer</a> et revenez sur cette page au cours de la même session. 
+<script>
+	myValue = sessionStorage.demo;
+	if (myValue == null || typeof(myValue) == "undefined")
+		myValue = "";
+	document.getElementById("demo").value = myValue;
+</script>
+
+
+
+</body>
+</html>

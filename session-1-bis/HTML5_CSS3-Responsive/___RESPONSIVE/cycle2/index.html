@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cycle</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="http://malsup.github.com/chili-1.7.pack.js"></script>
+<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+<script type="text/javascript" src="http://malsup.github.com/jquery.easing.1.3.js"></script>
+
+<script>
+/*
+////////effets/////////
+
+    blindX
+    blindY
+    blindZ
+    cover
+    curtainX
+    curtainY
+    fade
+    fadeZoom
+    growX
+    growY
+    none
+    scrollUp
+    scrollDown
+    scrollLeft
+    scrollRight
+    scrollHorz
+    scrollVert
+    shuffle
+    slideX
+    slideY
+    toss
+    turnUp
+    turnDown
+    turnLeft
+    turnRight
+    uncover
+    wipe
+    zoom
+////////////////////////////////////////
+*/
+
+/*
+////////////////////////////////////////
+Effets avec liens
+
+    fade
+    scrollUp
+    scrollDown
+    scrollLeft
+    scrollRight
+    shuffle
+
+///////////////////////////////////////
+*/
+
+
+
+
+$('#zoom').cycle({ 
+    fx:    'fade', 
+    sync:  false, 
+    delay: -2000,
+	speed:  1000,
+	timeout: 2000,
+	//fit:1,
+	width: 700,
+});
+</script>
+<style>
+#content  {
+	max-width:700px;
+	height:auto;
+	margin:auto;
+}
+
+.zoom , .zoom img  {
+	max-width:100%;
+	height:auto
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+<div id="content">
+  <div id="zoom" class=" zoom cycle-slideshow" 
+    data-cycle-fx="scrollHorz" 
+    data-cycle-timeout="2000"
+    data-cycle-slides="> a"
+    >
+   <a href="http://www.sentineldiego.com"> <img src="img/fond-ecrand.jpg" width="1600" height="1200"></a>
+    <a href="http://www.mpkprod.com"> <img src="img/fond-ecrand2.jpeg" width="1600" height="1200"></a>
+    
+    
+  </div>
+  
+  <div id="zoom" class=" zoom cycle-slideshow" >
+  <img src="img/fond-ecrand.jpg" width="1600" height="1200">
+     <img src="img/fond-ecrand2.jpeg" width="1600" height="1200">
+    
+    
+  </div>
+</div>
+</body>
+</html>

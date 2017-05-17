@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Document sans nom</title>
+<style>
+#conteneur span {
+	color:red;
+}
+
+#conteneur > span {
+	color:green;
+}
+/******selecteur adjacent direct*****************/
+#conteneur p + p {
+	color:orange;
+}
+
+
+
+/******selecteur adjacent indirect*****************/
+#conteneur2 p ~ p {
+	color:orange;
+}
+</style>
+</head>
+
+<body>
+
+<div id="conteneur">
+	<p><span>le span  dans le p</span></p>
+    <span>le span en dehors du p enfant direct de conteneur</span>
+    <p>2e paragraphe non ciblé par le selecteur + car il y a un span avant</p>
+    <p>3e paragraphe</p>
+    <p>4e paragraphe</p>
+</div>
+//////////////////////////////////////////////////////
+<div id="conteneur2">
+	<p><span>le span  dans le p</span></p>
+    <span>le span en dehors du p enfant direct de conteneur</span>
+    <p>2e paragraphe  ciblé par le selecteur ~ car il ne prends pas en compte les balises qui s'interposent...</p>
+    <p>3e paragraphe</p>
+    <p>4e paragraphe</p>
+</div>
+
+
+
+</body>
+</html>

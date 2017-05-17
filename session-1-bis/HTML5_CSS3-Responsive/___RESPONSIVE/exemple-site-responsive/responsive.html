@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<title>Page responsive</title>
+<meta charset="utf-8">
+
+<style>
+
+body {
+	font-family: sans-serif;
+	font-size: 100%;
+	background: #333;
+}
+body>h1 {
+	font-size: 2em;
+	padding: 0;
+	color: #fff;
+	margin: 1em 0;
+}
+section>h1, aside>h1 {
+	font-size: 1.6em;
+	background: #9b3;
+	color: #fff;
+	padding: 0.5em;
+	margin: 0;
+}
+section>h2 {
+	font-size: 1.2em;
+}
+nav ul, nav li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+}
+nav li {
+	font-size: 1rem;
+	display: inline-block;
+	width: 20%;
+	text-align: center;
+}
+nav a {
+	display: block;
+	text-decoration: none;
+	line-height: 200%;
+	padding: 0 2rem;
+}
+p {
+	text-align: justify;
+}
+section {
+	background: #fff;
+}
+a {
+	color: #369;
+}
+nav a {
+	color:#fff;
+	background: #555;
+	transition: all 0.5s linear;
+}
+nav a:hover {
+	background: #f90;
+	height: 200%;
+}
+
+/* ID'S */
+
+#main {
+	background: #eee;
+}
+
+/* Image */
+
+img.large {
+	margin: 0.5em 0;
+	width: 100%;
+	height: auto;
+}
+
+
+/* Clearfix */
+
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.clearfix:after { clear: both; }  
+.clearfix { zoom: 1; } 
+
+/* Disposition par défaut */
+
+section, aside {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.5em;
+	min-height: 300px;
+}
+nav {
+	width: 100%;
+}
+
+/* Grandes résolutions */
+
+@media screen and (min-width: 1024px) {
+	section {
+		float: left;
+		width: 70%;
+	}
+	aside {
+		float: left;
+		width: 30%;
+	}
+}
+
+/* Petites résolutions */
+
+/*@media screen and (orientation: portrait) {*/
+@media screen and (max-width: 640px) {
+	nav a {
+		display: block;
+	}
+	nav li {
+		float: none;
+		width: 100%;
+	}
+	section, aside, nav {
+		width: 100%;
+	}
+}
+
+</style>
+</head>
+
+<body>
+
+	<h1>Page responsive</h1>
+
+	<nav>
+		<ul>
+			<li><a href="#">Lien 1</a></li>
+			<li><a href="#">Lien 2</a></li>
+			<li><a href="#">Lien 3</a></li>
+			<li><a href="#">Lien 4</a></li>
+			<li><a href="#">Lien 5</a></li>
+		</ul>
+	</nav>
+	<div id="main" class="clearfix">
+	<section>
+		<h1>Section principale</h1>
+		<img class="large" src="main.jpg">
+		<h2>Lorem ipsum</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada elit at ante mollis, luctus pretium lectus consequat. Duis ut elit eget risus hendrerit gravida et ut dolor. Suspendisse vel eros eget dui dictum pellentesque vitae ut ipsum. Aenean sed felis risus. Praesent ultrices bibendum nibh, vel euismod arcu rhoncus vitae. Etiam nec libero tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean bibendum ipsum vitae metus ornare commodo. Cras tempus sem nunc, sit amet molestie enim volutpat sit amet.</p>
+		<p>Praesent luctus volutpat sem, et consequat odio congue ac. Etiam porttitor leo vitae arcu egestas, in aliquet arcu dictum. Morbi placerat tempor viverra. Cras scelerisque leo nulla, a iaculis eros porta sed. Etiam in leo molestie, iaculis lectus sit amet, semper ante. In ac porttitor nunc. Nullam dignissim ut ante quis ultricies. Quisque hendrerit, lacus id facilisis bibendum, mauris odio posuere quam, ac venenatis ante magna ut nibh. Vivamus lobortis justo ut nisl porttitor, eu convallis risus hendrerit. Proin at tincidunt odio. Duis molestie est vel leo cursus lacinia. Vestibulum arcu sapien, lobortis quis ante a, aliquam rhoncus augue. Nam tempor diam porttitor volutpat scelerisque. Etiam at molestie lacus. Maecenas eleifend sed purus fringilla pretium. Donec mollis nunc auctor lorem porttitor malesuada.</p>
+		<h2>Nulla vitae</h2>
+		<p>Nulla vitae eros lobortis, porta ipsum a, tincidunt augue. Integer sed dignissim justo. Mauris nisl nunc, rutrum vitae egestas ut, mattis in mi. Etiam lobortis, lectus vel gravida congue, arcu nisl volutpat tortor, ac tincidunt erat dui id mi. Sed feugiat nisl pulvinar, adipiscing mauris quis, interdum lectus. Duis ante neque, ultricies ac pellentesque id, aliquam id elit. Maecenas convallis blandit libero, sit amet feugiat ante pretium in.</p>
+	</section>
+	<aside>
+		<h1>Section annexe</h1>
+		<p>Aenean commodo velit magna, et lacinia justo aliquet at. Suspendisse condimentum lobortis diam vitae vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam sed turpis nibh. Maecenas nec nisi ligula. Sed vel egestas ipsum. Etiam sollicitudin massa eu dolor consequat, vel sollicitudin urna ullamcorper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent non nulla sit amet est tincidunt malesuada a id neque. Maecenas mattis volutpat nisi tempus malesuada. Donec id porta dui. In iaculis metus nisi, tincidunt gravida arcu bibendum eu. Duis quis quam porta, rutrum lacus at, ornare arcu. Vivamus in enim eget massa mattis cursus et ac lacus.</p>
+	</aside>
+	</div>
+
+</body>
+</html>

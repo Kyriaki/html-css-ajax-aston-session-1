@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input:optional {border:3px solid grey}
+input:required {border:3px solid orange}
+input:invalid  {border:3px solid red}
+</style>
+</head>
+<body>
+bord gris : optonnel<br>
+bord orange : requiq<br>
+bord rouge : invalide
+<form>
+<input type="text" value="optional"><br/>
+<br/>
+<input type="text" value="required" required>
+<input type="time" value="06:06"    required><br/>
+<br/>
+
+Lettres seulement, 
+Effacez le chiffre, pour rendre ce champ valide.<br>
+
+<input type="text" value="lettres9" pattern="[ a-zA-Z]*"><br>
+
+
+</form>
+
+
+</body>
+</html>

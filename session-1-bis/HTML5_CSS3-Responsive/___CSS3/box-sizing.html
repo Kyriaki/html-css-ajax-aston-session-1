@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div.container {
+    width: 300px;
+    border: 1px solid;
+}
+
+div.box {
+    width: 150px;
+    border: 3px solid coral;
+    float: left;
+    padding: 10px;
+}
+
+div
+{
+box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box; /* Safari */
+width:50%;
+float:left;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box" id="box1">This is BOX1.</div>
+  <div class="box" id="box2">This is BOX2.</div>
+  <div class="box" id="box2">This is BOX3.</div>
+  <div style="clear:both;"></div>
+</div>
+
+<p>Two 150 pixels boxes inside a 300 pixels container. It should fit nicely, but because of the borders and padding, the two boxes take up more space than 150 pixels each. This "problem" can be solved by setting the box-sizing property to "border-box".</p>
+
+<p>Click the "Try it" button to set the box-sizing property of the two boxes to "border-box":</p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Document sans nom</title>
+
+<style>
+#redimensionner {
+	width:200px;
+	height:200px;
+	resize:both;
+	overflow:auto;
+	border:1px #FF0000 solid;	
+}
+</style>
+
+</head>
+
+<body>
+<div id="redimensionner">
+Placez ici le contenu de  id "redimensionner"
+</div>
+</body>
+</html>

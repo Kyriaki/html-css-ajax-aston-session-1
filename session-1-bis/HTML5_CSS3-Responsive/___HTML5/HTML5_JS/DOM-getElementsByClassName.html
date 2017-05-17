@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+<span id="demo" class="ok"></span>
+
+<script>
+	document.getElementById("demo").innerHTML = "Il y a "
+		+ document.getElementsByClassName("ok").length
+		+ " élément de classe \"ok\" sur cette page.";
+</script>
+<!--///////////// celui ci ne sera bien sûr pas comptabilisé car le script se trouve avant //////////// -->
+<span id="demo" class="ok"></span>
+
+</body>
+</html>

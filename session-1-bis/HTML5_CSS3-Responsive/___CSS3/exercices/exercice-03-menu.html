@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Document sans nom</title>
+<style>
+ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+
+/********** menu haut****************/
+ul#menu_haut {
+	font-size:0;
+	padding:0;
+	margin:15px 0 0 10px;
+	
+}
+ul#menu_haut li {		
+	background-color:#F60;	
+	text-align:center;
+	line-height:30px;
+	font-size:1rem;
+	margin:0 1px 0 0;
+	border:1px #F60 solid;	
+	width:120px;
+	height:30px;
+	position:relative;	
+}
+
+ul#menu_haut > li {		
+	/*overflow:hidden;*/
+}
+
+
+
+ul#menu_haut li a{
+	color:#FFF;
+	font-weight:bold;
+	display:block;
+	text-decoration:none;
+	text-transform:uppercase;
+	
+}
+ul#menu_haut li a:hover{
+	color:#F60;
+	background-color:#FFF;
+	
+}
+
+/****sous menu ****/
+ul#menu_haut li ul.sous_menu {
+	display:none;	
+	position:absolute;
+	left:120px;
+	top:-100px;
+	width:auto;
+	height:100px;	
+	
+}
+
+ul#menu_haut li ul.sous_menu li {
+	clear:both;	
+	width:200px;	
+	padding:0px;	
+	
+	
+}
+
+ul#menu_haut li ul.sous_menu li a{	
+	clear:both;
+}
+
+/***************************/
+ul#menu_haut li:hover ul.sous_menu{
+	display: block;
+	color:#F60;
+	background-color:#FFF;
+	/***********************************/
+	animation:animMenu 1s;
+	-webkit-animation:animMenu 1s;
+	-moz-animation:animMenu 0.5s;
+	-o-animation:animMenu 1s;
+	 /***********************************/	
+	 -webkit-animation-fill-mode:forwards;
+	 -moz-animation-fill-mode:forwards;
+	 -o-animation-fill-mode:forwards;
+	 animation-fill-mode:forwards;	 
+}
+
+@-moz-keyframes animMenu
+{	
+from {top: -100px;}
+to {top: 0;}
+
+0%   { opacity:0;}
+25%  { opacity:0.1}
+50%  { opacity:0.2}
+75%  { opacity:0.3}
+100% { opacity:1}
+}
+
+@-webkit-keyframes animMenu
+{	
+from {top: -100px;}
+to {top: 0;}
+
+0%   { opacity:0;}
+25%  { opacity:0.1}
+50%  { opacity:0.2}
+75%  { opacity:0.3}
+100% { opacity:1}
+}
+
+
+
+
+
+/*************************************/
+</style>
+</head>
+
+<body>
+<!--//////debut menu/////////////-->
+    <ul id="menu_haut">
+      <li><a href="index.html">Accueil</a></li>
+       <li>
+      		<a href="#">Menu 1</a>
+            <ul class="sous_menu">
+            	<li><a href="#">Sous menu 1</a></li>
+                <li><a href="#">Sous menu 1</a></li>
+                <li><a href="#">Sous menu 1</a></li>
+            </ul>
+      </li>
+      <li>
+      		<a href="#">Menu 2</a>
+            <ul class="sous_menu">
+            	<li><a href="#">Sous menu 2</a></li>
+                <li><a href="#">Sous menu 2</a></li>
+                <li><a href="#">Sous menu 2</a></li>
+            </ul>
+      </li>
+      
+    </ul>
+    <!--//////fin menu/////////////-->
+</body>
+</html>

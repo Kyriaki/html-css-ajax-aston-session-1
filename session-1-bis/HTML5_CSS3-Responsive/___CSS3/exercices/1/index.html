@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8"> 
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">   
+	<link rel="stylesheet" href="styles.css">     
+	<title>Passer à HTML5 : les balises</title>
+</head>
+<body>
+<div id="conteneur">	
+    <header><h1>Site stylisé en CSS3</h1></header>
+    <nav id="menu-top">
+       <a href="#nogo">Accueil</a>
+       <a href="#nogo">divers</a>
+       <a href="#nogo">contact</a>
+    </nav>
+	<aside>
+		<p contentEditable>Ce texte est modifiable<br />vous pouvez même y insérer vos notes </p>
+	</aside>
+	<div id="contenu">
+    	<video width="400" height="222" controls="controls">        
+            <!--3 format video + un lecteur flash !!! normalement votre video devrait être lue par tous les navigateurs -->         
+            <!--Pour convertir vos videos dans les différent format utiliser le lecteur VLC // allez dans le menu ficher / convertir -->
+             <source src="http://www.nicolas-hoffmann.net/animations/Cavernae_Terragen2.mp4" type="video/mp4" />
+             <source src="http://www.nicolas-hoffmann.net/animations/Cavernae_Terragen2.webm" type="video/webm" />
+             <source src="http://www.nicolas-hoffmann.net/animations/Cavernae_Terragen2.theora.ogv" type="video/ogg" /> 
+             <object type="application/x-shockwave-flash" width="400" height="222" data="http://www.youtube.com/v/HVMoJqg41Bw"> 
+             <param name="movie" value="http://www.youtube.com/v/HVMoJqg41Bw" />
+             <param name="wmode" value="transparent" />
+             <!--[if lte IE 6 ]>
+             <embed src="http://www.youtube.com/v/HVMoJqg41Bw" type="application/x-shockwave-flash" allowscriptaccess="always"
+             allowfullscreen="true" width="400" height="222"></embed>
+             <![endif]-->
+             <p>Vous n'avez pas de navigateur moderne, ni flash d'installé sur Internet Explorer... 
+             suivez les liens ci-dessous pour télécharger les vidéos.</p>
+             </object> 
+        </video>            
+		<article>        
+        Lorem Salu bissame ! Wie geht's les samis ? Hans apporte moi une Wurschtsalad avec un picon bitte, s'il te plaît.  Voss ? Une Carola et du Melfor ? Yo dû, espèce de Knäckes, ch'ai dit un picon !</article>
+        
+
+         <div class="ligne_sep"></div>
+         
+         <figure>
+                <img src="../../../img/ecole-emweb.png" alt="Structure HTML5" width="220" height="79">
+                <figcaption>L'Ecole des métiers du Web à distance</figcaption>
+         </figure>
+         
+		<article>           
+        Hopla vous savez que la mamsell Huguette, la miss Miss Dahlias du messti de Bischheim était au Christkindelsmärik en compagnie de Richard Schirmeck (celui qui a un blottkopf), le mari de Chulia Roberstau, qui lui trempait sa Nüdle dans sa Schneck ! Yo dû, Pfourtz ! Ch'espère qu'ils avaient du Kabinetpapier, Gal !</article>
+        
+        <div class="ligne_sep"></div>
+		
+		<article>Tu restes pour le lotto-owe ce soir, y'a baeckeoffe ? Yeuh non, merci vielmols mais che dois partir à la Coopé de Truchtersheim acheter des mänele et des rossbolla pour les gamins. Hopla tchao bissame ! Consectetur adipiscing elit</article>		
+	</div>
+	<footer>Pied de page</footer>
+</div>    
+</body>
+</html>

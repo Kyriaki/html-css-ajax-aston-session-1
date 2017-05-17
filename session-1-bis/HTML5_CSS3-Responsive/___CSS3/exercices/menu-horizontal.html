@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+<style>
+
+ul {
+    margin:0;
+    padding: 0;;
+}
+ul#menutop {
+    background: #cc0000;
+}
+
+ul#menutop li {
+    position: relative;
+    display: inline-block;
+    position: relative;
+}
+
+ul#menutop >  li > a {
+   display:block;
+    width:150px;
+    height: 35px;
+    line-height: 35px;
+text-align: center;
+    background: yellow;
+    text-decoration: none;
+}
+
+#menutop li a:hover {
+    background: #000;
+    color: yellow;
+}
+
+#menutop li ul {
+    position: absolute;
+    top:35px;
+    left:0;
+}
+
+#menutop li ul {
+    display:none; /* block;*/
+}
+
+#menutop li ul li a {
+    display: block;
+    width:200px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: red;
+    border-bottom: 1px #000 solid;
+    text-decoration: none;
+    color: #000;
+}
+#menutop li ul li a:hover {
+    background: #000;
+    color: red;
+}
+
+ul#menutop >  li:hover ul  {
+    display:block;
+
+}
+
+
+
+
+
+
+
+</style>
+
+
+</head>
+<body>
+<ul id="menutop">
+
+    <li><a href="#nogo">Menu 1</a>
+        <ul>
+            <li><a href="#" >ss menu 1</a></li>
+            <li><a href="vmware-nos-prestations.php" >ss menu 2</a></li>
+        </ul>
+
+    </li>
+    <li><a href="#nogo">Menu 2</a> </li>
+    <li><a href="vmware-contact.php">Menu 3</a></li>
+</ul>
+</body>
+</html>

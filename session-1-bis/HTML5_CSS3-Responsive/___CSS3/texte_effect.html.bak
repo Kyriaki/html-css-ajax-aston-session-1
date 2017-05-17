@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+#myDIV h1 {	
+	font-size:5em;
+	width:300px;
+	border:2px #FF0000 dashed;
+	/*word-wrap:break-word;*/
+	text-shadow:5px 5px 3px #CCCCCC; 
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+/*
+strech, round, repeat
+*/
+
+</style>
+</head>
+<body>
+
+
+
+<div id="myDIV">
+  <h1>Hello ijiiohjkhjkhjkhjkhjkhjkhkjhjkhjkhkj</h1>
+</div>
+
+
+
+
+
+</body>
+</html>

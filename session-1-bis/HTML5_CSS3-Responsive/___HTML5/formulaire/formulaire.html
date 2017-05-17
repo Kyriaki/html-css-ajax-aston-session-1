@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+
+<script src="_html5detect.js"></script>
+
+
+<!--_pseudo-class.css
+input:optional {background-color: silver}
+input:required {background-color: fuchsia}
+input:invalid  {background-color: red}
+-->
+<form action="_input.php">
+
+Saisie d'une date (obligatoire)<br/>
+<input type="date" name="myDate" title="Date (aaaa-mm-jj)" value="2009-01-15" required>
+<br/><br/>
+Saisie d'une heure (obligatoire)<br>
+<input type="time" name="myTime" title="Heure (hh:mn)"     value="08:16"      required><br/>
+<br/><br/>
+
+AutoFocus ; <br/>
+<input type="number" name="myNumber" title="Nombre"  value="10" min="8" max="12" step="2"	autofocus required>
+<br>
+<br/>
+
+Saisie d'une valeur spécifique comprise entre 2 valeur avec possibilité de définir un pas.<br>
+<input type="range"  name="myRange"  title="Curseur" value="0"  min="0" max="10" step="2" oninput="document.getElementById('rangeOutput').textContent=value"><br/>
+<span id="rangeOutput">0</span>
+
+<br>
+<br/>
+
+Saisie d'une couleur<br/>
+<input type="color" name="myColor" title="Couleur en anglais" value="#666666">
+<br/><br/>
+
+Saisie d'une adresse email (obligatoire)<br/>
+<input type="email" name="myEmail" title="Courriel"	required>
+
+<br/><br/>
+Saisie d'une URL<br/>
+<input type="url"   name="myURL"   title="URL"    	required><br/>
+
+<br/><br/>
+Saisie d'un numéro à 10 chiffres sans espace (obligatoire)<br/>
+<input type="number" name="myNumber" title="Nombre"   min="0" max="7" step="1"	autofocus required maxlength="10">
+
+<br/>
+<br/>
+Champ texte obligatoire (obligatoire)
+<input type="text" name="myText" title="Champ texte obligatoire" required><br/>
+<br/>
+<input type="submit" value="Valider">
+</form>
+
+
+<script>
+	isAttributeSpecified("myDate",  "type", "date")
+	isAttributeSpecified("myTime",  "type", "time")
+	isAttributeSpecified("myNumber","type", "number")
+	isAttributeSpecified("myRange", "type", "range")
+	isAttributeSpecified("myColor", "type", "color")
+	isAttributeSpecified("myEmail", "type", "email")
+	isAttributeSpecified("myURL",   "type", "url")
+
+	isAttributeSupported("input", "autofocus")
+	isAttributeSupported("input", "placeholder")
+	isAttributeSupported("input", "required")
+	isAttributeSupported("input", "min")
+	isAttributeSupported("input", "max")
+	isAttributeSupported("input", "step")
+</script>
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Document sans nom</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<style>
+/*
+--------------------------------------------------------
+Les row ont des marge négative pour compesnser les goutières par défaut des colonnes
+
+Pour palier à cela une row doit être place dans un container
+<main class="container-fluid">
+       	<div class="row">
+		</div>
+</div>
+--------------------------------------------------------
+
+Le contenu se place tj dans les colonnes enfant des row
+<main class="container-fluid">
+       	<div class="row">
+			<div class="col-md-9 col-xs-9">Contenu</div>
+		</div>
+</div>
+
+--------------------------------------------------------
+Système de grille
+100% d'un conteneur est divisé en 12 parties (possibilité de faire 12 colonnes)
+
+Syntaxe :
+col-X-Y
+X peut prendre les valeurs
+
+    xs (for phones)
+    sm (for tablets)
+    md (for desktops)
+    lg (for larger desktops)
+Y represente un nombre qui définit la largeur de la colonne en subdivision de 12
+ex : si 2 colonne 
+<div class="col-md-6 col-xs-6">Contenu</div>
+<div class="col-md-6 col-xs-6">Contenu</div>
+
+___________________________________________________________
+
+Pour appliquer des marges au col, il faut inclure dans la col un div
+Ex : <div class="col-md-3 col-xs-3"><div class="classWithPad">Widget 1</div> </div>
+
+
+-------------------------------------------------------------
+Menu rsponsive
+c'est la classe navbar-inverse qui met en forme le bt mobile
+
+-------------------------------------------------------------
+Ordre des col
+col-vp-push-x = push the column to the right by x number of columns, starting from where the column would normally render (position: relative), on a vp or larger view-port.
+
+col-vp-pull-x = pull the column to the left by x number of columns, starting from where the column would normally render (position: relative), on a vp or larger view-port.
+
+vp = xs, sm, md, or lg (minimum viewport)
+
+x = 1 thru 12 (number of columns)
+
+
+*/
+
+
+
+div {
+	/*outline:1px #000 solid;*/
+}
+
+#page {
+	max-width:1100px;
+	margin:0 auto;
+	
+}
+#myCarousel {
+	max-height:300px;	
+}
+
+.carousel-inner .item img {
+	max-width:1100px!important;
+	height:auto!important;
+}
+
+#nav-main {
+	/*height:40px*/
+	
+	
+}
+main {
+	min-height:200px;
+	background-color:#F60
+}
+
+main div div div.row:nth-child(2n) {	
+	background-color: #69F;
+	min-height:150px;
+}
+main div div div.row:nth-child(2n+1) {	
+	background-color: #63C;
+	min-height:150px;
+}
+
+
+#nav-main {	
+	/* background-color:transparent;
+    border-color:transparent;*/
+	margin-bottom:0; /* par défaut la classe navbar à une marge de 20px*/
+	
+}
+/*
+.navbar-inverse {
+    background-color: #222;
+    border-color: #080808;
+}
+
+*/
+#nav-main div {
+	/*background-color:blue;*/
+	/*background-color:orange;*/
+	margin:0 2px 0 0;
+	
+	
+}
+#nav-main ul {
+	/*background-color:orange;*/
+	padding-top:3px;
+	/*min-height:50px	*/
+}
+/* supprime un ligne horiz sous le menu*/
+#nav-main .nav-tabs {
+    border-bottom:none;
+} 	
+	
+
+
+footer  {
+	
+	margin:0 0 20px 0;
+	background-color:#F30;
+	
+}
+
+
+footer div .classWithPad {
+	padding:5px;
+	margin:5px;
+	background-color:#F00;
+}
+
+.icon-bar {
+	color:#FFF;
+}
+
+button.navbar-toggle {
+	/*background-color:#FFF;*/
+}
+</style>
+
+
+
+</head>
+
+<body>
+<div class="container-fluid">
+	
+      		<!--::::::::::::::::::-->       
+          <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Bootstrap theme</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+  
+    
+  <div class="container-fluid" id="page">  
+  
+   <!--///////////////////caroussel///////////////////////////////////////-->  
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="img/1_b.jpg" alt="Chania">
+        </div>
+    
+        <div class="item">
+          <img src="img/2_b.jpg" alt="Chania">
+        </div>
+    
+        <div class="item">
+           <img src="img/3_b.jpg" alt="Chania">
+        </div>    
+        
+      </div>
+    
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!--/////////////////////////////////////////////////////////////////////////////-->
+          
+       
+        <nav class="navbar navbar-inverse" id="nav-main">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+       
+       <main class="container-fluid">
+       	<div class="row">	
+       		<div class="col-md-9 col-xs-12">
+            	<div class="row">
+                	<div class="col-md-6 col-md-push-6 col-xs-12">1</div>
+                    <div class="col-md-6 col-md-pull-6 col-xs-12">2</div>
+                </div>
+                <div class="row">
+                	<div class="col-md-6 col-xs-12">3</div>
+                    <div class="col-md-6 col-xs-12">4</div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-xs-12">
+            aside
+            </div>
+            
+       </div>     
+      </main>
+      
+      <footer class="container-fluid">
+      	<div class="row">	
+            <div class="col-md-3 col-xs-12"><div class="classWithPad">Widget 1</div> </div>
+            <div class="col-md-3 col-xs-12"><div class="classWithPad">Widget 2</div> </div>
+            <div class="col-md-3 col-xs-12"><div class="classWithPad">Widget 3</div> </div>
+            <div class="col-md-3 col-xs-12"><div class="classWithPad">Widget 4</div> </div>
+        </div>
+      </footer>
+          
+          
+               
+               
+                
+     </div> <!--////// fin page-->  
+      
+      
+      
+        	
+   
+
+
+
+</div>
+
+</body>
+</html>

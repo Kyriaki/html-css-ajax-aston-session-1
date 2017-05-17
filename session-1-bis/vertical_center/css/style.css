@@ -1,0 +1,22 @@
+#container{
+	position: relative;
+	width: 800px;
+	height: 800px;
+	background-color: #aaaaaa;
+}
+#centered{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+	border-radius: 100px;
+	top: 50%;
+	left: 50%;
+	margin: -100px -100px;
+
+	transition: transform 2s;
+}
+#centered:hover{
+	transform: rotate(360deg);
+	cursor: pointer;
+}

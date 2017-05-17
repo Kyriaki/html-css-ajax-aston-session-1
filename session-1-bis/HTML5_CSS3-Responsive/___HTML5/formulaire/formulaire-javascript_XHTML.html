@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Formulaire</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script>
+date_envoi = new Date();
+
+jour = date_envoi.getDate();
+mois = (date_envoi.getMonth())+1;
+annee = date_envoi.getFullYear();
+
+//alert(jour + " - " + mois + " - " + annee);
+
+
+
+
+
+function verifForm() {
+	var tabErreur = new Array();
+	var message = "Veuillez renseigner ";
+	var nom = document.getElementById("nom");
+	var monsieur = document.getElementById("monsieur");
+	var madame = document.getElementById("madame");
+	var pays = document.getElementById("pays");
+	var tel = document.getElementById("tel");
+	var email = document.getElementById("email");
+	var code_postal = document.getElementById("code_postal");
+	// les regex en JS doivent commencer et se terminer par un slash
+	// s'ils contiennent des Slash il faut les "echapper" avec un anti slash ex : \/
+	var code_postalRegex =   /^[0-9]{5,5}$/ ;	
+	var telRegex =  /^((\+|00)33\s?|0)[1-5](\s?\d{2}){4}$/;	
+	var emailRegex =  /^[^\W][a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\@[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.[a-zA-Z]{2,4}$/ ;
+	
+	
+	
+	
+	/////////civilite//////////////
+	if(monsieur.checked == false && madame.checked == false)
+	{
+		//alert(message + "la civilité");
+		var erreur = "- la civilité";
+		tabErreur.push(erreur);	
+		//document.getElementById("alerte_civilite").style.display = "block";
+        var erreur = document.getElementById("bloc_form_left");
+        var node = document.createElement("P");
+        var textnode = document.createTextNode("la civilité");
+        var alerte = node.appendChild(textnode);
+        //erreur.appendChild(node);
+        erreur.insertBefore(node,  erreur.childNodes[0]);
+		//return false;
+	}
+	else
+	{
+		document.getElementById("alerte_civilite").style.display = "none";
+
+	}	
+	
+	 ////////nom///////////////
+	if (nom.value == "") {		
+		//alert(message + "le nom");
+		var erreur =  "le nom";	
+		tabErreur.push(erreur);
+		nom.className = "alerte";		
+		//return false;
+	}
+	else
+	{
+		nom.className = "";		
+	}
+	
+	//////////pays////////////////	
+	if (pays.value == "") {		
+		//alert(message + "le pays");
+		var erreur = "le pays";		
+		tabErreur.push(erreur);	
+		pays.className = "alerte";			
+		//return false;
+	}
+	else
+	{
+		nom.className = "";
+
+
+	}
+	////////////////////////////
+	 ////////code_postal///////////////
+	 //////////////////////////	
+	if (code_postal.value == "") {		
+		//alert(message + "le pays");
+		var erreur = "le numéro de téléphone";		
+		tabErreur.push(erreur);	
+		code_postal.className = "alerte";			
+		//return false;
+	}
+	// verification Regex du format du numéro de téléphone
+	else if (!code_postalRegex.test(code_postal.value)) 
+	{	
+		var erreur = "le code postal n'est pas valide";		
+		tabErreur.push(erreur);	
+		code_postal.className = "alerte";	
+		alert("le code postal n'est pas valide");		
+	}
+	else
+	{
+		code_postal.className = "";		
+	}
+	
+	/////////////////////////////
+	//////////pays////////////////	
+	if (pays.value == "") {		
+		//alert(message + "le pays");
+		var erreur = "le pays";		
+		tabErreur.push(erreur);	
+		pays.className = "alerte";			
+		//return false;
+	}
+	else
+	{
+		nom.className = "";		
+	}
+	
+	//////////tel////////////////	
+	if (tel.value == "") {		
+		//alert(message + "le pays");
+		var erreur = "le numéro de téléphone";		
+		tabErreur.push(erreur);	
+		tel.className = "alerte";			
+		//return false;
+	}
+	// verification Regex du format du numéro de téléphone
+	else if (!telRegex.test(tel.value)) 
+	{	
+		var erreur = "le numéro de téléphone n'est pas valide";		
+		tabErreur.push(erreur);	
+		tel.className = "alerte";	
+		alert("le numéro de téléphone n'est pas valide");		
+	}
+	else
+	{
+		tel.className = "";		
+	}
+	/////////////////////////////
+	
+	//////////email////////////////	
+	if (email.value == "") {		
+		//alert(message + "le pays");
+		var erreur = "le pays";		
+		tabErreur.push(erreur);	
+		email.className = "alerte";			
+		//return false;
+	}
+	// verification Regex du format de l'email
+	else if (!emailRegex.test(email.value)) 
+	{	
+		var erreur = "l'email n'est pas valide";		
+		tabErreur.push(erreur);	
+		email.className = "alerte";	
+		alert("l'email n'est pas valide");		
+	}
+	else
+	{
+		email.className = "";		
+	}
+	/////////////////////////////
+	
+	
+///////////////////////
+//alert(tabErreur.length);
+/////////////////////////
+
+
+
+	if (tabErreur.length > 0)
+	{
+		
+		var message_erreur = tabErreur.join("\n");
+		//alert(message + "\n " + message_erreur);
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+
+	
+}
+</script>
+
+
+ 
+
+
+</head>
+
+<body>
+
+
+<form action="formulaire.php" method="post" enctype="multipart/form-data" name="form_complet" id="form_complet">
+<input name="date" type="hidden" />
+
+
+<!--/////////////////bloc gauche///////////////////////////////-->
+
+<div class="colonne" id="bloc_form_left">
+  <fieldset>
+    <legend>Coordonnées</legend>
+    
+    <label for="civilite">Civilité</label>
+    <input name="sexe" type="radio" value="monsieur" id="monsieur" /><label for="civilite">Monsieur</label><br />  
+    <label></label>  
+    <input name="sexe" type="radio" value="madame"  id="madame"/><label for="civilite">Madame</label>
+
+    <span id="alerte_civilite" class="alerte_bt"></span>
+    
+    <br /> 
+    <label for="nom">Nom</label>
+    <input name="nom" type="text" maxlength="150" id="nom" />
+    <br /> 
+    
+    <br />  
+    
+    <label for="adresse">Adresse</label>
+    <input name="adresse" type="text" maxlength="150" id="adresse" />
+    <br />    
+    
+    <label for="ville">ville</label>
+    <input name="ville" type="text" maxlength="150" id="ville" />
+    
+    <br />    
+    
+    <label for="code_postal">code_postal</label>
+    <input name="code_postal" type="text" maxlength="150" id="code_postal" />
+    
+    
+     <br />   
+     
+     
+    <label for="pays">Pays</label>
+    <select name="pays" id="pays">
+      <option selected="selected" value="">Faîtes votre choix</option>
+      <option value="france" >France</option>
+      <option value="belgique">Belgique</option>
+      <option value="usa">USA</option>
+      </select>   
+   
+    
+    <br />    
+    
+    <label for="tel">Téléphone</label>
+    <input name="tel" type="text" maxlength="150" id="tel" /> Format: 00 00 00 00 00
+     <br />
+
+    
+     <label for="email">email</label>
+    <input name="email" type="text" maxlength="150" id="email" />  
+    
+    
+    <br />  
+    <label for="photo">Photo</label><input name="photo" type="file" id="photo" />   
+  </fieldset>
+ 
+ </div> <!--/// fin bloc gauche-->
+ 
+ 
+ 
+  <!--////////////////////////////////////////////////-->
+  <!--////////////////////////////////////////////////-->
+ 
+ 
+ <!--/////////////////bloc droite/////////////////////-->
+ <div class="colonne" id="bloc_form_right">
+  <fieldset>
+    <legend>Présentation</legend>
+   
+    
+    <label for="commentaire">Commentaires</label><br />
+    <textarea name="commentaire" id="commentaire" ></textarea>
+    
+  </fieldset>
+
+<!--////////////////////////////////////////////-->
+
+
+
+
+  <fieldset id="divers">
+    <legend>Vos loisirs ?</legend>      
+    <label for="musique">Musique</label>
+    <input name="musique" type="checkbox" id="musique" /><br />
+    <label for="theatre">Théâtre</label>
+    <input name="theatre" type="checkbox" id="theatre"/><br />
+    <label for="cinema">Cinéma</label>
+    <input name="cinema" type="checkbox" id="cinema"/>
+	<span id="alerte_loisirs" class="alerte_bt"></span>
+    
+    
+    
+    <br />
+    
+    
+  </fieldset>
+</div><!--/// fin bloc droite-->
+
+
+
+		<br class="clear" />
+
+     <input name="bt_envoi" type="submit"  id="bt_submit"  onclick="return verifForm()" />
+
+</form>
+
+<script>
+    ////////////// fonction pour dénombrer et afficher les objets du formulaire
+
+    function objets_formulaire() {
+
+        //alert("Ce formulaire a " + document.forms['form_complet'].length + " objets \n\n ");
+
+        tab_formulaire = new Array();
+
+        for (i=0; i < document.forms["form_complet"].length ;i++) {
+            tab_formulaire.push(i + " : " + document.forms['form_complet'].elements[i].name + "\n");
+        }
+        //alert (tab_formulaire.join("\n"));
+    }
+
+    //////////////////////////////////////////////////////////////////////////
+    objets_formulaire();
+
+</script>
+
+</body>
+</html>

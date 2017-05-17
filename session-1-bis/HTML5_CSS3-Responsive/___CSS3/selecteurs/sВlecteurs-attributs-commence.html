@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css"> 
+p.example{
+		margin:0;
+		padding:10px;
+		color:#000;
+	}
+p.example[title^="ess"]{
+    color:#fff;
+    background:#333;
+}
+</style>
+</head>
+<body>
+
+
+
+		
+	<p class="example"> je n'ai pas d'attribut title</p>
+	<p class="example" title="comment"> j'ai un attribut title mais il ne commence pas par "ess"</p>
+	<p class="example" title="essai"> j'ai un attribut title commençant par "ess"</p>
+	<p class="example" title="esson"> j'ai un attribut title commençant par "ess" également</p>
+
+
+
+</body>
+</html>

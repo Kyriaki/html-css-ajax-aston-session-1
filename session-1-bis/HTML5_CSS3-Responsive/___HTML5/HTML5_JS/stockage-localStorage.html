@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+<script>
+	function set() {
+		filename = document.forms["editor"].filename.value;
+		data = document.forms["editor"].data.value;
+		localStorage.setItem(filename, data);
+		document.forms["editor"].data.value = "";
+	}
+	function get() {
+		filename = document.forms["editor"].filename.value;
+		document.forms["editor"].data.value = localStorage.getItem(filename);
+	}
+</script>
+<form name="editor">
+1. Saisissez le texte à sauver..<br>
+
+	<textarea onClick="this.value=''" name="data">.</textarea><br/>
+	<br/>
+	2. Entrer un nom de fichier puis sauver :
+	<input name="filename">	<input type="button" value="Sauver" onClick="set()"><br>
+3. Le texte est sauvegardé et vous pouvez le relire
+	<input type="button" value="Relire" onClick="get()">
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css"> 
+div
+{
+/* propriétés de départ */	
+width:100px;
+height:100px;
+/**********************/
+background:red;
+transition:width 2s, height 2s;
+/*
+Méthodes por transform voir : http://www.w3schools.com/cssref/css3_pr_transform.asp
+*/
+-moz-transition:width 2s, height 2s, -moz-transform 2s; /* Firefox 4 */
+-webkit-transition:width 2s, height 2s, -webkit-transform 2s; /* Safari and Chrome */
+-o-transition:width 2s, height 2s, -o-transform 2s; /* Opera */
+}
+
+div:hover
+{
+/* propriétés de fin */		
+width:200px;
+height:200px;
+/********************/
+/*
+Méthodes pour transform voir : http://www.w3schools.com/cssref/css3_pr_transform.asp
+Rotate : deg
+Scale : defaut 1
+Skew : deg (x-angle,y-angle)
+Translate : px
+*/
+transform:rotate(180deg);
+-moz-transform:rotate(180deg); /* Firefox 4 */
+-webkit-transform:rotate(180deg); /* Safari and Chrome */
+-o-transform:rotate(180deg); /* Opera */
+}
+</style>
+<p><b>Note:</b> This example does not work in Internet Explorer.</p>
+
+<div>Hover over me to see the transition effect!</div>
+
+</body>
+</html>

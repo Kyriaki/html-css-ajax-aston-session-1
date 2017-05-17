@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+Sélectionnez plusieurs images<br/>
+<input type="file" accept="image/*" multiple onchange="filesProcess(this.files)"
+	name="selection"/>
+<br/>
+<span id="result">...</span>
+<script>
+function filesProcess(files){
+	selection = "<table><tr><th>Nom</th><th></th><th>Octets</th><th></th><th>Type MIME</th></tr>"
+	for(i=0;i<files.length;i++){
+		file = files[i]
+		selection += "<tr><td>"+file.name+"</td><td> | </td><td style=\"text-align:right\">"
+			+file.size+"</td><td> | </td><td>"
+			+file.type+"</td></tr>"}
+	selection += "</table>"
+	document.getElementById("result").innerHTML = selection}
+</script>
+
+</body>
+</html>

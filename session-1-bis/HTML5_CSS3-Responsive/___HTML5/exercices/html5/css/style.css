@@ -1,0 +1,61 @@
+/************font*******************/
+
+
+
+html {
+    font-size: 30px;
+}
+
+body {
+   background-color: darkorange;
+    background-image: url('../img/fond.jpg');
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+    color:#aaa;
+    font-size: 1rem;
+
+}
+
+p {
+    text-align: justify;
+}
+
+a {
+    color: orange;
+    text-decoration: none;
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+/********************classe****************************/
+.mentions {
+
+}
+
+/*****************structure*********************/
+#site{
+    background-color: #000;
+
+
+}
+
+header#top {
+    background-color: yellow;
+}
+
+footer {
+    background-color: yellow;
+
+}
+
+article footer {
+    background-color: orange;
+}
+
+/******menu*****************/
+
+
+
+/************media queries***********************/

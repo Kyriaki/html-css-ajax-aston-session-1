@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+<span id="myPosition"></span>
+<script>
+	function getCoords(position) {
+	    lat = position.coords.latitude
+		pos  = "Latitude : " + lat  + "<br/>";
+		pos += "Longitude: " + position.coords.longitude + "<br/>";
+		pos += "Altitude : " + position.coords.altitude;
+		myPosition = document.getElementById("myPosition")
+		myPosition.innerHTML = pos;
+		myPosition.className = (lat ? "ok" : "ko")
+	}
+	navigator.geolocation.getCurrentPosition(getCoords);
+</script>
+
+<p><a href="http://maxheapsize.com/static/html5geolocationdemo.html">Un exemple plus imagée</a></p>
+</body>
+</html>

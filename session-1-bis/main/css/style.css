@@ -1,0 +1,230 @@
+/* Import d'une police de caractère */
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
+*{
+	box-sizing: border-box;
+}
+html{
+	font-size: 14px;
+}
+body{
+	font-size: 1rem;
+	font-family: 'Ubuntu', sans-serif;
+	color : #000000;
+	background-color: #eeeeee;
+	background-image: url("../img/image.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+header#top{
+	position: relative;
+	height: 17%;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+img:hover{
+	opacity: 0.5;
+	cursor: pointer;
+}
+h1{
+	font-size: 3.5vw;
+	color: #888888;
+	position: absolute;
+	top: 50%;
+	left: 60%;
+}
+h1, h2, h3{
+	text-shadow: 2px 2px #eeeeee;
+}
+footer#bottom{
+	background-color: #ffff00;
+}
+p{
+	text-align: justify;
+}
+li a{
+	
+	background: #1e5799; /* Old browsers */
+	background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+	text-decoration: none;
+}
+li a:hover{
+	color: #ff0000;
+	text-decoration: underline;
+}
+ul{
+		font-size: 0;
+		padding: 0;
+}
+ul li{
+	display: inline-block;
+	list-style-type: none;
+}
+ul li a{
+	font-size: 1rem;
+	width : 120px;
+	line-height: 30px;
+	text-align: center;
+	display: block;
+	border: 1px #000 dotted;
+}
+i{
+	background-color: #35d0c9;
+	color: #000000;
+}
+table{
+	border-collapse: collapse;
+}
+thead:nth-child(1){
+	background-color: #0000e4;
+}
+tbody tr:nth-child(even){
+	border-bottom-color: #ff0000;
+}
+tbody tr:nth-child(odd){
+	border-bottom-color: #00ffff;
+}
+tfoot:nth-of-type(1){
+	background-color: #e45702;
+}
+#site{
+	margin: 0 auto;
+	max-width: 1200px;
+	min-height: 200px;
+	overflow: hidden;
+}
+#cible:target{
+
+}
+#fixed-top{
+	background-color: #a598c2;
+	position: fixed;
+	width: 450px;
+	height: 50px;
+	z-index: 2;
+
+	-moz-box-shadow: 0px 10px 5px #656565;
+	-webkit-box-shadow: 0px 10px 5px #656565;
+	-o-box-shadow: 0px 10px 5px #656565;
+	box-shadow: 0px 10px 5px #656565;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color='#6565', Direction=135, Strength=5);
+}
+#fixed-bot{
+	position: fixed;
+	right: 10%;
+	bottom: 0%;
+}
+#fixed-bot2{
+	position: fixed;
+	right: 5%;
+	bottom: 0%;
+}
+#gauche{
+	width: 65%;
+	background-color: #66f66f;
+	padding: 10px;
+}
+#droite{
+	width: 35%;
+	background-color: #ff0066;
+	padding: 10px;
+}
+#arrow-icon{
+	width: 50px;
+	height: 50px;
+}
+.colonnage{
+	float: left;
+}
+/* Retour de flux obsolète
+.clear{
+	clear:both;
+}
+*/
+.clearfix:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix{
+	zoom: 1;
+}
+.video-container{
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+	position: relative;
+	overflow: hidden;
+}
+.video-container iframe{
+	width: 100% !important;
+	height: 100% !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Responsive stuff */
+@viewport{
+	widt1: device-width;
+	zoom:1;
+}
+/* Portable */
+@media screen and (max-width: 1366px){
+
+}
+/* Tablette */
+@media screen and (max-width: 1024px){
+	html{
+		font-size: 1rem;
+	}
+	ul li{
+		display: block;
+	}
+	ul li a{
+		width: 100%;
+	}
+}
+/* Mobile */
+@media screen and (max-width: 500px){
+	html{
+		font-size: 1.25rem;
+	}
+	ul li{
+		display: block;
+	}
+	ul li a{
+		width: 100%;
+	}
+	#fixed-top{
+		width: 200px;
+		height: 30px;
+		font-size: 1.75vw;
+
+	}
+	.colonnage{
+		float: none;
+	}
+	#fixed-bot{
+		display: none;
+	}
+	#gauche{
+		width: 100%;
+		background-color: #66f66f;
+		padding: 10px;
+	}
+	#droite{
+		width: 100%;
+		background-color: #ff0066;
+		padding: 10px;
+	}
+
+}

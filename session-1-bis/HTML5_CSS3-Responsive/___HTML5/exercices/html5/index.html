@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Démonstration des éléments de section HTML5</title>
+
+    <!-- Feuille de styles génériques -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<body>
+<div id="site">
+    <!-- Header -->
+    <header id="top">
+        <img src="img/header-Rainbow.jpg">
+        <h1>Titre du site</h1>
+    </header>
+
+    <!-- nav principale -->
+    <nav>
+        <ul>
+            <li><a href="#">Rubrique 1</a></li>
+            <li><a href="#">Rubrique 2</a></li>
+            <li><a href="#">Rubrique 3</a></li>
+            <li><a href="#">Rubrique 4</a></li>
+        </ul>
+    </nav>
+
+    <h2>Titre de la page</h2>
+
+
+    <!-- Main -->
+    <div id="gauche">
+        <section id="theme1">
+            <article>
+                <figure>
+                    <img src="img/parking.jpg" alt="signification exhaustive de l'imadge">
+                </figure>
+                <figcaption>Titre de la photo</figcaption>
+
+                <p>Contenu de l'article, contenu de l'article, contenu de
+                    l'article, contenu de l'article, contenu de l'article,
+                    contenu de l'article, contenu de l'article...</p>
+
+                <footer>
+                    <p>ecrit par xxxxxxxx</p>
+                </footer>
+            </article>
+        </section>
+
+        <hr>
+
+        <section id="theme2">
+            <article>
+                <figure>
+                    <img src="img/parking.jpg">
+                    <figcaption>Titre de la photo</figcaption>
+                </figure>
+                <p>Contenu de l'article, contenu de l'article, contenu de
+                    l'article, contenu de l'article, contenu de l'article,
+                    contenu de l'article, contenu de l'article...</p>
+
+                <footer>
+                    <p>mise à jour le xxxxx</p>
+                </footer>
+            </article>
+        </section>
+    </div>
+
+    <!-- sidebar -->
+    <div id="droite">
+        <aside>
+            <p>contenu pas important en terme semantique</p>
+        </aside>
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="#">Lien 1</a></li>
+                    <li><a href="#">Lien 2</a></li>
+                    <li><a href="#">Lien 3</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+
+
+    <!-- footer -->
+    <footer>
+        <p class="mentions">&copy; 2016 Tous droits de reproductions réservés</a></p>
+    </footer>
+</div>
+</body>
+</html>

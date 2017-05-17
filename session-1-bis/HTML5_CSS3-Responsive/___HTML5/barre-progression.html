@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+<progress id="progressBar" value="73.5" max="100"></progress>
+<span id="percent"></span>
+<script>
+	eltBar = document.getElementById("progressBar");
+	eltPct = document.getElementById("percent");
+	eltPct.innerHTML = eltBar.position * 100 + "%";
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	margin:0
+}
+
+#form_complet {	
+	width:95%;
+	background-color:#FC0;
+	padding:20px;	
+}
+
+fieldset {	
+	margin-right:15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding:15px;
+	border:1px #FF3300 solid;
+}
+label {
+	display:inline-block;
+	width:120px;
+	padding:10px;
+}
+legend {
+	font-size:1.3em;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#63F
+}
+
+fieldset#divers {
+	padding-bottom:45px
+}
+
+/***********************************/
+div#bloc_form_left, div#bloc_form_right {
+	width:50%
+}
+
+#bt_submit {
+	display:block;
+	width:150px;
+	height:35px;
+	background-color:#F30;
+	border:1px #000000 solid;
+	margin:10px auto; 
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	cursor:pointer
+}
+
+
+/***********************************/
+.colonne {
+	float:left
+}
+
+.clear {
+	clear:both
+	
+}
+
+.alerte {
+	background-color:#F60;
+}
+
+.alerte_ok {
+	background-color: #3C0;
+}
+
+.alerte_bt {
+	display:none;
+	font-size:1.25em;
+	color:#F00;
+	background-color:#000
+		
+}
+.alerte_bt::after {
+	content: "Veuillez faire un choix SVP";
+}
+
+/*
+[type="checkbox"]:not(:checked) + label {
+	border:3px #FF6600 solid; 
+	
+}*/
